@@ -1,19 +1,14 @@
 <script type="application/javascript">
-
     //
     // Add a class to the header bar if we're scrolled down
     //
-    $(window).scroll(function() 
-    {
-        var header = $(".d-header-wrap");
+    $(window).scroll(function() {
+        const header = $(".d-header-wrap"),
+              scroll = $(window).scrollTop();
         
-        var scroll = $(window).scrollTop();
-        if (scroll >= 50) 
-        {
+        if (scroll >= 50)
             header.addClass("fixed");
-        } else 
-        {
+        else 
             header.removeClass("fixed");
-        }
     });
 </script>
